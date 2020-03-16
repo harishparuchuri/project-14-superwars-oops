@@ -35,8 +35,9 @@ class Player {
     }
 
     // getting random strength
-    getRandomStrength = () => {
+     getRandomStrength = () => {
         return Math.ceil(Math.random() * 100);
+    
     }
 
     // Create a player for displaying
@@ -67,7 +68,7 @@ class Superwar {
         // Use Map method to loop through players argument and create new players
         // Type your code here
         this.players = players.map((player, i) => {
-            let type = (i % 2 == 0) ? 'HERO' : 'villain';
+            let type = (i % 2 == 0) ? 'hero' : 'villain';
             return new Player(i, player, type);
         });
 
